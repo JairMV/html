@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos en Línea</title>
+    <style>
+        body {
+            background-color: darkgray;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elementos en Línea</h1>
+
+    <!-- 
+        em     -> énfasis
+        strong -> más énfasis
+        small  -> menos énfasis/relevancia que el texto normal
+        br     -> fuerza un salto de línea
+        wbr    -> salto de línea si hiciera falta
+        *Es necesario saber que el navegador puede interpretar los guiones (-) como si fueran elementos wbr
+        *Quizás también los &
+        time   -> se usa para representar un contenido de hora/fecha
+        *Solo usar time para casos en los que el tiempo sea importante, como la fecha de un evento, el tiempo que duraran las ofertas de una tienda.
+        sup    -> superíndice
+        sub    -> subíndice
+    -->
+
+    <p>
+        <em>El dinero</em> es importante, pero <strong>la salud</strong> es aún mas importante. <small>Saludos !!!</small>
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet <br> consectetur, adipisicing elit. Maxime expedita impedit fugit accusamus facilis tenetur iure repellat eaque odit illum consequatur harum assumenda voluptatem necessitatibus <br> natus qui, reiciendis similique animi? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem voluptates ex aperiam qui? Eaque perferendis minima molestiae beatae. Quo fugit vel voluptatibus possimus autem. Sapiente alias iusto ullam itaque ipsam.
+    </p>
+
+    <p>
+        http://<wbr>127.0.0.1:5500/<wbr>6-inline-elements.html
+    </p>
+    
+    <time>12/02/2001</time>
+    <time>12 de Febrero del 2001</time>
+    <time>10:20 pm</time>
+
+    <p>
+        H<sub>2</sub>0
+    </p>
+
+    <p>
+        y = 2x<sup>5</sup>
+    </p>
+</body>
+</html>

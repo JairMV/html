@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos</title>
+    <style>
+        body {
+            background-color: darkgray;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Los atributos son valores adicionales que configuran los elementos y/o ajustan su comportamiento. Son aquellos que nos ayudan a dar información extra sobre un elemento.
+
+        Tenemos 2 tipos de atributos: 
+
+        Comunes:   Con una sitaxis  -> atributo="valor"
+        Boolenaos: Con una sintaxis -> atributo (solo el nombre del atributo)
+
+        ---------------------------------------------------------------------------
+
+        Los atributos globales son aquellos que estan disponibles para la mayoria de etiquetas en HTML como los siguientes:
+
+        class  -> Se usa para dar estilos al elemento desde CSS
+        id     -> Se usa para dar un identificador único y asi trabajar con el desde JS y también poder hacer navegación con anclas
+        title  -> Es un atributo que ayuda a la accesibilidad mostrando una descripción del elemento al que pertenece, cuando poses el mouse en el aparecera
+        data-* -> Es un atributo que nos permite guardar algún valor en la etiqueta HTML
+    -->
+
+    <p class="parrafo-1">Clases</p>
+    <p id="parrafo">Identificador</p>
+    <p title="Here is the tooltip !!!">Título con tooltip</p>
+    <p data-ejemplo="">Datos pasados en la etiqueta</p>
+</body>
+</html>

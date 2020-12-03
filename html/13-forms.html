@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body {
+            background-color: darkgray;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        La estructura básica de un formulario se compone de 4 elementos
+
+        form   -> Es la etiqueta que engloba nuestro formulario
+        label  -> Sirve para escribir el nombre del campo a rellenar, debe tener el atributo - for - al cual se le indica un id que lo que hará será emparejar el label con su - input - correspondiente
+        input  -> Sirve para crear un campo que permitirá al usuario interactuar
+        button -> Crea un botón que permitira enviar el formulario
+
+        input type:
+
+        button         -> Se comporta igual que un botón <button>
+        submit         -> Se utiliza para enviar el formulario
+
+        Inputs de fechas
+        date           -> Se utiliza para introducir una fecha
+        datetime       -> Obsoleto
+        datetime-local -> Fecha y hora (no funciona en Firefox)
+        time           -> Se utiliza para introducir una hora
+        *TIP           -> Se recomienda usar date y time para seleccionar fecha y hora en firefox
+        month          -> Se utiliza para introducir un mes
+        week           -> Se utiliza para introducir el número de la semana del año
+
+        search         -> Se utiliza para las barras de búsqueda
+        tel            -> Se utiliza para introducir números telefónicos
+        email          -> Se utiliza para introducir un email
+        password       -> Se utiliza para contraseñas
+        url            -> Se utiliza para introducir URLs
+
+        color          -> Se utiliza para especificar un color
+        number         -> Se utiliza para valores númericos
+        range          -> Se utiliza para establecer un rango
+        reset          -> Se utiliza para resetear el formulario
+        text           -> Valor por defecto
+
+        hidden         -> Campo oculto, puede contener valor pero no se mostrará
+
+        radio          -> Permite seleccionar una única opción de una lista de opciones relacionadas
+        *Podemos asociarlos a una categoria usando el atributo name="nombre-categoria" para seleccionar solo uno
+        *Si queremos que una opcion aparezca marcada por defecto, necesitamos usar el atributo booleano - checked -
+        *También es necesario usar el atributo value="" para poner el dato que sera enviado
+        checkbox       -> Permite seleccionar varias opciones de una lista de opciones relacionadas
+        select         -> Crea una lista de opciones donde podemos seleccionar una o varias opciones
+
+        Cada opción irá dentro de una etiqueta <option></option>
+
+        Si tenemos muchas opciones podemos ordenarlas por categorías a través de la etiqueta <optgroup></optgroup> con el atributo - label - para nombrar la categoría
+
+        Más elementos para formularios
+
+        fieldset -> Se utiliza para agrupar elementos de un formulario
+        legend   -> Representa una etiqueta para el contenido del fieldset
+        file     -> Este input se utiliza para cargar archivos y enviarlos desde un formulario
+        meter    -> Representa un valor dentro de un rango conocido
+        progress -> Representa el progreso de una tarea
+        textarea -> Se utiliza para introducir texto en un formulario
+    -->
+
+    <!-- <form>
+        <label for="name">Nombre</label>
+        <input id="name">
+        <button>Enviar Formulario</button>
+    </form> -->
+
+    <!-- Button vs type="button" -->
+    <!-- 
+        type="button" no envia el formulario, se puede usar para hacer alguna operación con el usando JavaScript, si se quiere enviar el formulario usando un input se usara type="submit"
+        button envia el formulario
+    -->
+    <!-- <form>
+        <input type="button" value="">
+        <button>Enviar</button>
+    </form> -->
+
+    <!-- Inputs para fechas -->
+    <!-- <form>
+        <input type="date" name="" id="">
+        <input type="time" name="" id="">
+        <input type="datetime-local" name="" id="">
+    </form> -->
+
+    <!-- ---------------------------------------- -->
+    <!-- <form>
+        <label for="">Search</label>
+        <input type="search">
+        <br>
+        <label for="">Teléfono</label>
+        <input type="tel">
+        <br>
+        <label for="">Email</label>
+        <input type="email" name="" id="">
+        <br>
+        <label for="">Password</label>
+        <input type="password" name="" id="">
+        <br>
+        <label for="">URL</label>
+        <input type="url" name="" id="">
+    </form> -->
+
+    <!-- <form>
+        <input type="color" name="" id="">
+        <input type="number" name="" id="">
+        <input type="range" step="10" min="0" max="30" name="" id="">
+        <input type="reset">
+    </form> -->
+
+    <form>
+        <!-- <h2>¿Cuál es tu género?</h2>
+        <label for="">Masculino
+            <input type="radio" name="gender" value="Masculino" id="">
+        </label>
+        <label for="">Femenino
+            <input type="radio" name="gender" class="Femenino" id="">
+        </label>
+        <label for="">Desconocido
+            <input type="radio" name="gender" class="Desconocido" id="" checked>
+        </label> -->
+
+        <!-- <h2>Lenguajes que conoces</h2>
+        <label>HTML
+            <input type="checkbox" name="languages" value="HTML" id="">
+        </label>
+        <label>CSS
+            <input type="checkbox" name="languages" value="CSS" id="">
+        </label>
+        <label>JavaScript
+            <input type="checkbox" name="languages" value="JavaScript" id="">
+        </label> -->
+
+        <!-- Elemento select -->
+        <!-- 
+            Si queremos seleccionar varios, usaremos el atributo booleano - multiple - y podremos seleccionar varios usando la tecla - ctrl -
+        -->
+        <!-- <select name="languages" multiple>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+        </select> -->
+
+        <!-- <select name="mascotas" id="">
+            <optgroup label="4 patas">
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Hamster">Hamster</option>
+                <option value="Conejo">Conejo</option>
+            </optgroup>
+
+            <optgroup label="aves">
+                <option value="Loro">Loro</option>
+                <option value="Canario">Canario</option>
+            </optgroup>
+
+            <optgroup label="otras">
+                <option value="Serpiente">Serpiente</option>
+                <option value="Tarantula">Tarántula</option>
+            </optgroup>
+        </select> -->
+
+        <!-- <input type="list" type="pets">
+        <datalist id="pets">
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
+            <option value="Hamster">Hamster</option>
+            <option value="Conejo">Conejo</option>
+            <option value="Loro">Loro</option>
+            <option value="Canario">Canario</option>
+            <option value="Serpiente">Serpiente</option>
+            <option value="Tarantula">Tarántula</option>
+        </datalist> -->
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="name">Nombre</label>
+            <input type="text" name="" id="name">
+            <label for="surname">Apellidos</label>
+            <input type="text" name="" id="surname">
+        </fieldset>
+
+        <input type="file">
+
+        <label for="fuel">Gasolina</label>
+        <meter id="fuel" min="0" max="100" value="50" low="30" high="80" optimum="50"></meter>
+
+        <label for="task">Tarea 1</label>
+        <progress id="task" max="100" value="35"></progress>
+        <br>
+        <label for="message">Mensaje</label>
+        <textarea name="" id="message" cols="30" rows="5"></textarea>
+    </form>
+</body>
+</html>
